@@ -1,0 +1,78 @@
+/** start maps **/
+.map-dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.map-dashboard__map {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 400px;
+  position: relative;
+}
+.map-dashboard__legend {
+  -ms-flex-preferred-size: max-content;
+      flex-basis: max-content;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 1rem auto;
+}
+
+#info-box {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  padding: 0.5em 0.75em;
+  font-family: "Public Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 999;
+}
+
+.county {
+  fill: #e6e6e6;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  stroke: #000;
+}
+.county[data-enabled] {
+  fill: #b6cde7;
+}
+
+.county[data-enabled]:hover, .county.active {
+  fill: #ebc252;
+}
+
+.state_outline {
+  fill: #e6e6e6;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  stroke: #000;
+}
+
+#countyLinks li a.active,
+#countyLinks li a:focus {
+  font-weight: bold;
+  color: orangered;
+}
+
+/** end maps **/
